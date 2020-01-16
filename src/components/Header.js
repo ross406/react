@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = props => {
   return (
@@ -10,13 +11,13 @@ const Header = props => {
           </a>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a href="/" className="nav-link">
+              <Link to="/" className="nav-link ml-5">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle ml-5"
                 href="/"
                 id="navbarDropdown"
                 role="button"
@@ -28,31 +29,56 @@ const Header = props => {
               </a>
             </li>
             <li className="nav-item">
-              <a href="/about" className="nav-link">
+              <Link to="/about" className="nav-link ml-5">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/contact" className="nav-link">
+              <Link to="/contact" className="nav-link ml-5">
                 Contact us
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/test" className="nav-link">
+              <Link to="/test" className="nav-link ml-5">
                 Test
-              </a>
+              </Link>
+            </li>
+            <li className="nav-item ml-5">
+              <Link to="/signup">
+                <button type="button" class="btn btn-primary ">
+                  <i class="fa fa-camera mr-2"></i>
+                  SELL
+                </button>
+              </Link>
+            </li>
+            <li className="nav-item ml-5">
+              <Link to="/signup">
+                <button type="button" class="btn btn-success ">
+                  Sign Up
+                </button>
+              </Link>
+            </li>
+            <li className="nav-item ml-2">
+              <Link to="/login">
+                <button type="button" class="btn btn-success ">
+                  Log In
+                </button>
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
-      <form className="row d-flex justify-content-center form-inline my-2 my-lg-3 mb-3">
-        <input
-          className="form-control mr-sm-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button className="btn btn-dark my-2 my-sm-0" type="submit">
+      <form className=" container row justify-content-center ml-5">
+        <div className="col-sm-10">
+          <input
+            className="form-control"
+            type="search"
+            placeholder="Search Products.."
+            aria-label="Search"
+          />
+        </div>
+        <button className="btn btn-dark my-2 my-sm-0 " type="submit">
+          <i class="fa fa-search mr-2"></i>
           Search
         </button>
       </form>

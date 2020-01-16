@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header';
 
 class Test extends Component {
   state = {
@@ -13,6 +14,7 @@ class Test extends Component {
   render() {
     return (
       <div>
+        <Header />
         <h1>Test Component</h1>
       </div>
     );
